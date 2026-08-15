@@ -1,0 +1,273 @@
+{
+  "description": "Reglas del juego y normas de negocio del dominio Pokémon Pokopia (Fase 1 - Domain Research).",
+  "version": "1.0",
+  "date": "2026-08-15",
+  "rules": [
+    {
+      "id": "RULE001",
+      "category": "Mundo/estructura",
+      "rule": "Pokopia es un juego de simulación de vida (life simulation), no hay combates entre Pokémon.",
+      "detail": "La progresión se basa en construcción, agricultura, cocina, hábitats y peticiones.",
+      "sources": ["SRC001", "SRC042"],
+      "status": "FACT"
+    },
+    {
+      "id": "RULE002",
+      "category": "Jugador",
+      "rule": "El jugador controla a Ditto, que se ha transformado en humano.",
+      "sources": ["SRC001", "SRC003"],
+      "status": "FACT"
+    },
+    {
+      "id": "RULE003",
+      "category": "Pokédex",
+      "rule": "La Pokédex principal contiene 300 Pokémon, todos obtenibles en el juego.",
+      "detail": "Se completan con hábitats, no con capturas.",
+      "sources": ["SRC030", "SRC043"],
+      "status": "FACT"
+    },
+    {
+      "id": "RULE004",
+      "category": "Pokédex",
+      "rule": "Existen Pokédex separadas para Pokémon de eventos y para Bubbly Basin (DLC).",
+      "detail": "La Cloud Island Pokédex es idéntica a la principal.",
+      "sources": ["SRC030", "SRC015"],
+      "status": "FACT"
+    },
+    {
+      "id": "RULE005",
+      "category": "Reclutamiento",
+      "rule": "Los Pokémon se reclutan construyendo sus hábitats; no se capturan con Poké Balls.",
+      "sources": ["SRC017", "SRC032"],
+      "status": "FACT"
+    },
+    {
+      "id": "RULE006",
+      "category": "Aparición",
+      "rule": "La aparición de Pokémon depende de ubicación, hora del día y clima.",
+      "detail": "Regla de luz: Pokémon nocturnos pueden aparecer de día en zonas oscuras, y diurnos de noche en zonas muy iluminadas.",
+      "sources": ["SRC017"],
+      "status": "FACT"
+    },
+    {
+      "id": "RULE007",
+      "category": "Movimientos",
+      "rule": "Ditto aprende movimientos al conocer a ciertos Pokémon; cada movimiento consume PP.",
+      "sources": ["SRC016"],
+      "status": "FACT"
+    },
+    {
+      "id": "RULE008",
+      "category": "Especialidades",
+      "rule": "Las especialidades son roles de trabajo de los Pokémon; no son habilidades y no se pueden aprender.",
+      "detail": "Un Pokémon puede tener 1-2 especialidades.",
+      "sources": ["SRC032", "SRC042"],
+      "status": "FACT"
+    },
+    {
+      "id": "RULE009",
+      "category": "Comida",
+      "rule": "Hay 4 tipos de comida (Salad, Soup, Bread, Hamburger Steak) × 6 variantes = 24 recetas, más Smoothies (DLC).",
+      "sources": ["SRC033", "SRC045", "SRC013"],
+      "status": "FACT"
+    },
+    {
+      "id": "RULE010",
+      "category": "Comida",
+      "rule": "Cada tipo de comida potencia un movimiento concreto y restaura PP.",
+      "detail": "Salad→Leafage, Soup→Water Gun, Bread→Cut, Hamburger Steak→Rock Smash, Smoothie→Surf.",
+      "sources": ["SRC016", "SRC033", "SRC013"],
+      "status": "FACT"
+    },
+    {
+      "id": "RULE011",
+      "category": "Comida",
+      "rule": "Existen 5 sabores (+ neutro); cada Pokémon tiene un flavor favorito que afecta su Comfort.",
+      "sources": ["SRC033"],
+      "status": "FACT"
+    },
+    {
+      "id": "RULE012",
+      "category": "Cocina",
+      "rule": "La cocina se desbloquea en Rocky Ridges rescatando al Chef Dente; el Bread Oven requiere un Pokémon con especialidad Burn.",
+      "sources": ["SRC033", "SRC049"],
+      "status": "FACT"
+    },
+    {
+      "id": "RULE013",
+      "category": "Agricultura",
+      "rule": "La agricultura usa Rototiller (preparar suelo), Water Gun (regar) y la especialidad Grow (acelerar).",
+      "detail": "Rototiller no funciona en tierra seca.",
+      "sources": ["SRC032"],
+      "status": "FACT"
+    },
+    {
+      "id": "RULE014",
+      "category": "Agricultura",
+      "rule": "Las semillas se desbloquean al alcanzar Environment Level 3 en la zona.",
+      "sources": ["SRC032"],
+      "status": "FACT"
+    },
+    {
+      "id": "RULE015",
+      "category": "Agricultura",
+      "rule": "Los cultivos pasan por 4 etapas y tardan días (tiempo real) en crecer.",
+      "sources": ["SRC045"],
+      "status": "FACT"
+    },
+    {
+      "id": "RULE016",
+      "category": "Economía",
+      "rule": "Las Life Coins se obtienen con Challenges y el Stamp Rally y se gastan en el PC Shop.",
+      "sources": ["SRC035"],
+      "status": "FACT"
+    },
+    {
+      "id": "RULE017",
+      "category": "Economía",
+      "rule": "El trueque (Trade) es un sistema independiente de las Life Coins basado en el valor de los objetos.",
+      "sources": ["SRC035", "SRC056"],
+      "status": "FACT"
+    },
+    {
+      "id": "RULE018",
+      "category": "Electricidad",
+      "rule": "La electricidad se genera con Mini Generator, Windmill, Waterwheel o Furnace (combustible).",
+      "sources": ["SRC028"],
+      "status": "FACT"
+    },
+    {
+      "id": "RULE019",
+      "category": "Electricidad",
+      "rule": "Límites de energía por zona: máximo 64 generadores y no más de 1024 objetos eléctricos a la vez.",
+      "detail": "Cifra sujeta a verificación (ver contradicciones C05).",
+      "sources": ["SRC028"],
+      "status": "INFERENCE"
+    },
+    {
+      "id": "RULE020",
+      "category": "Electricidad",
+      "rule": "Utility Poles y Wireless Power Transmitters distribuyen electricidad; cada uno conecta hasta 20 objetos.",
+      "sources": ["SRC028", "SRC051"],
+      "status": "FACT"
+    },
+    {
+      "id": "RULE021",
+      "category": "Progresión",
+      "rule": "El Trainer Rank sube solo con Important Requests: No Rank → Great → Ultra → Master.",
+      "detail": "C03 RESUELTO (Serebii + The Games Wiki coinciden; 'Super'/'Hyper' sin evidencia). Great→Bleak Beach+Rocky Ridges; Ultra→Sparkling Skylands; Master→examinar la Master Ball en la azotea del Huge Building (final de historia).",
+      "sources": ["SRC034", "SRC019"],
+      "status": "FACT"
+    },
+    {
+      "id": "RULE022",
+      "category": "Progresión",
+      "rule": "El Environment Level (1-10 por área) sube con el Comfort de los Pokémon, completando Requests y añadiendo edificios/kits (aunque nadie viva en ellos).",
+      "detail": "Puede bajar al quitar Pokémon (re-bloquea ítems no comprados y Challenges); nivel 5 requerido en las 4 áreas de historia para el final; cada nivel desbloquea Challenges y ítems de tienda; Lv.5 regalo de ítems, Lv.10 recetas. GAP-01/02 resueltos a nivel mecánico.",
+      "sources": ["SRC023", "SRC066"],
+      "status": "FACT"
+    },
+    {
+      "id": "RULE023",
+      "category": "Progresión",
+      "rule": "Los legendarios aportan más puntos de Environment Level que los Pokémon normales al subir su Comfort.",
+      "sources": ["SRC023", "SRC045"],
+      "status": "FACT"
+    },
+    {
+      "id": "RULE024",
+      "category": "Progresión",
+      "rule": "El Comfort Level tiene 5 niveles (Iffy→Average→Nice→Great→Awesome); sin hábitat el Pokémon tiene Comfy 0.",
+      "detail": "Cada Pokémon tiene un hábitat preferido (Warm, Humid, Dark, etc.): un hábitat acorde sube el comfort y objetos que le disgustan lo bajan. Una casa construida sube el comfort más rápido que un mero hábitat. Regalos diarios y hablar suben el nivel.",
+      "sources": ["SRC023", "SRC040", "SRC024"],
+      "status": "FACT"
+    },
+    {
+      "id": "RULE025",
+      "category": "Áreas",
+      "rule": "Desbloqueo por área = completar su Important Request + reconstruir su Pokémon Center + alcanzar Environment Level 5 en esa área; entre áreas, las puertas se abren por Trainer Rank (Great→Bleak Beach+Rocky Ridges; Ultra→Sparkling Skylands).",
+      "detail": "C02 RESUELTO (The Games Wiki + Serebii). Bleak Beach/Rocky Ridges tras 'Yawn Up a Storm!'; Sparkling Skylands tras 'Brighten Things Up!' y 'Time to Party!'.",
+      "sources": ["SRC034", "SRC044", "SRC023", "SRC066"],
+      "status": "FACT"
+    },
+    {
+      "id": "RULE026",
+      "category": "Áreas",
+      "rule": "Palette Town está disponible desde el inicio del juego (sandbox de construcción).",
+      "sources": ["SRC044"],
+      "status": "FACT"
+    },
+    {
+      "id": "RULE027",
+      "category": "Multiplayer",
+      "rule": "Link Play requiere Environment Level 2 y unos 30 minutos de juego; soporta 2-4 jugadores.",
+      "sources": ["SRC009"],
+      "status": "FACT"
+    },
+    {
+      "id": "RULE028",
+      "category": "Multiplayer",
+      "rule": "GameShare permite jugar a 2 jugadores en Palette Town; solo el host necesita el juego.",
+      "sources": ["SRC012"],
+      "status": "FACT"
+    },
+    {
+      "id": "RULE029",
+      "category": "Eventos",
+      "rule": "Los eventos limitados requieren moneda de evento obtenida en Dream Islands; el Pokémon reclutado se queda permanentemente.",
+      "sources": ["SRC029"],
+      "status": "FACT"
+    },
+    {
+      "id": "RULE030",
+      "category": "Eventos",
+      "rule": "Los Mystery Gifts se reciben por Internet (automáticos), serial codes (un solo uso) o passwords (multiuso).",
+      "sources": ["SRC029", "SRC031"],
+      "status": "FACT"
+    },
+    {
+      "id": "RULE031",
+      "category": "Dream Islands",
+      "rule": "Las Dream Islands se visitan una vez por día con Drifloon; la isla depende del muñeco usado.",
+      "sources": ["SRC022", "SRC047"],
+      "status": "FACT"
+    },
+    {
+      "id": "RULE032",
+      "category": "DLC",
+      "rule": "El acceso a Bubbly Basin requiere el update 2.0.0, completar la request 'Raise the environment level!' en Bleak Beach y aprender Dive.",
+      "sources": ["SRC008", "SRC013"],
+      "status": "FACT"
+    },
+    {
+      "id": "RULE033",
+      "category": "DLC",
+      "rule": "El Expansion Pass da acceso a las 3 partes con una sola compra.",
+      "sources": ["SRC013", "SRC014"],
+      "status": "FACT"
+    },
+    {
+      "id": "RULE034",
+      "category": "Crafting",
+      "rule": "Los materiales se transforman en cadena: materias primas → componentes (con especialidades/equipos) → objetos finales.",
+      "detail": "Ej.: Ore→Ingot (Smelting Furnace+Burn); Wastepaper→Paper (Recycle); Limestone→Concrete (Concrete Mixer+Crush).",
+      "sources": ["SRC037"],
+      "status": "FACT"
+    },
+    {
+      "id": "RULE035",
+      "category": "Crafting",
+      "rule": "Algunos recursos son exclusivos o regionales (p. ej. Gold Ore en Rocky Ridges y Withered Wastelands; Fresh Carrot en Wastelands; Sea Glass/Seashell en Bleak Beach).",
+      "sources": ["SRC037", "SRC068"],
+      "status": "FACT"
+    },
+    {
+      "id": "RULE036",
+      "category": "Progresión",
+      "rule": "El Team Initiation Challenge es la cadena final de entregas que completa el juego (9 retos, C06 RESUELTO).",
+      "detail": "9 retos según Serebii (etapa 1 = 5 Leppa Berries → Bouldery Badge; etapa 5 = 50 Electricity+10 Crystal Fragments+5 Tinkagears; etapa 7 = Env Level 5 en 3 áreas; etapa 9 = 2 Party Poppers + Env Level 5 en Wastelands). The Games Wiki fusiona los retos 8-9 contando 8. Edificio: cohete de Team Rocket.",
+      "sources": ["SRC038", "SRC042", "SRC020"],
+      "status": "FACT"
+    }
+  ]
+}

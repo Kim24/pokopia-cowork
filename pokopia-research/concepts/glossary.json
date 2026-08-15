@@ -1,0 +1,257 @@
+{
+  "description": "Glosario de conceptos del dominio Pokémon Pokopia (Fase 1 - Domain Research).",
+  "version": "1.0",
+  "date": "2026-08-15",
+  "entries": [
+    {
+      "term": "Life Coins",
+      "definition": "Moneda principal del juego. Se obtiene con Challenges (PC del Pokémon Center), Stamp Rally (semanal) y vendiendo materiales.",
+      "sources": ["SRC035"]
+    },
+    {
+      "term": "PC Shop",
+      "definition": "Tienda del Pokémon Center donde se gastan Life Coins: recipes, semillas, building kits, Packing Tips, PP Up y muebles.",
+      "sources": ["SRC035"]
+    },
+    {
+      "term": "Trade (trueque)",
+      "definition": "Sistema de intercambio independiente de las Life Coins: Pokémon con especialidad Trade venden objetos a cambio de objetos de valor equivalente (puntos de valor por objeto).",
+      "sources": ["SRC035", "SRC056"]
+    },
+    {
+      "term": "Challenges",
+      "definition": "Retos del PC del Pokémon Center que otorgan Life Coins (p. ej. capturar/registrar cierto tipo de Pokémon, en X días).",
+      "sources": ["SRC035"]
+    },
+    {
+      "term": "Stamp Rally",
+      "definition": "Evento semanal de sellos que otorga Life Coins (~1.500-2.000+); los sellos se canjean los viernes (tiempo real).",
+      "sources": ["SRC035"]
+    },
+    {
+      "term": "Packing Tips",
+      "definition": "Mejoras de capacidad de la bolsa que se compran en el PC Shop (100 / 500 / 1000 Life Coins).",
+      "sources": ["SRC035"]
+    },
+    {
+      "term": "PP (Power Points)",
+      "definition": "Energía que consume cada movimiento de Ditto. Se restaura en el Pokémon Center, con comida o ingredientes; PP Up aumenta el máximo.",
+      "sources": ["SRC016", "SRC035"]
+    },
+    {
+      "term": "PP Up",
+      "definition": "Ítem que aumenta el máximo de PP de un movimiento.",
+      "sources": ["SRC035"]
+    },
+    {
+      "term": "Habitat",
+      "definition": "Combinación de objetos construidos para atraer a un Pokémon concreto. El Pokémon aparece tras un tiempo si se cumplen condiciones de lugar, hora y clima.",
+      "sources": ["SRC017"]
+    },
+    {
+      "term": "Habitat Dex",
+      "definition": "Enciclopedia de los 209 hábitats del juego base.",
+      "sources": ["SRC017", "SRC043"]
+    },
+    {
+      "term": "Environment Level",
+      "definition": "Nivel (1-10) de cada área basado en la suma del Comfort Level de sus Pokémon. Desbloquea items, semillas y el final del juego.",
+      "sources": ["SRC023"]
+    },
+    {
+      "term": "Comfort Level",
+      "definition": "Estado de comodidad de cada Pokémon (No Home, Iffy, Average, Nice, Great, Awesome). Alimenta el Environment Level del área.",
+      "sources": ["SRC023", "SRC040"]
+    },
+    {
+      "term": "Friendship",
+      "definition": "Vínculo del Pokémon con Ditto, separado del Comfort. Al máximo, el Pokémon te llama por tu nombre y te considera 'best friend'.",
+      "sources": ["SRC024"]
+    },
+    {
+      "term": "Trainer Rank",
+      "definition": "Rango del jugador (No Rank, Great, Ultra, Master) que sube solo con Important Requests. Desbloquea áreas del mundo.",
+      "sources": ["SRC034"]
+    },
+    {
+      "term": "Important Request",
+      "definition": "Petición clave de la historia que sube el Trainer Rank (p. ej. 'Yawn Up a Storm!', 'Brighten Things Up!', 'Time to Party!', 'Rebuild the Huge Building!').",
+      "sources": ["SRC019", "SRC034"]
+    },
+    {
+      "term": "Request",
+      "definition": "Misión/petición de un Pokémon. Se rastrean en el menú Requests del Pokédex.",
+      "sources": ["SRC034"]
+    },
+    {
+      "term": "Specialty",
+      "definition": "Rol de trabajo de cada Pokémon (no es una habilidad). Determina qué tareas puede hacer (p. ej. Chop, Grow, Burn, Recycle). Puede haber 2 por Pokémon.",
+      "sources": ["SRC042"]
+    },
+    {
+      "term": "Flavor",
+      "definition": "Sabor de la comida (Sweet, Spicy, Dry, Bitter, Sour, Neutral). Cada Pokémon tiene un favorito que sube su Comfort si le das esa comida.",
+      "sources": ["SRC033", "SRC045"]
+    },
+    {
+      "term": "Mystery Gifts",
+      "definition": "Entregas de objetos: Internet (automáticos), serial codes (un solo uso) o passwords (multiuso).",
+      "sources": ["SRC029", "SRC031"]
+    },
+    {
+      "term": "Event",
+      "definition": "Evento limitado en el tiempo con Pokémon e items exclusivos, usando moneda de evento obtenida en Dream Islands.",
+      "sources": ["SRC029"]
+    },
+    {
+      "term": "Dream Island",
+      "definition": "Isla de recursos visitable una vez por día con Drifloon. La isla depende del muñeco (doll) usado. Pueden encontrarse legendarios.",
+      "sources": ["SRC022", "SRC047"]
+    },
+    {
+      "term": "Cloud Island",
+      "definition": "Isla persistente online (hasta 4 jugadores) con Pokédex y recompensas compartidas y bolsa separada.",
+      "sources": ["SRC010", "SRC012"]
+    },
+    {
+      "term": "Link Play",
+      "definition": "Multiplayer (2-4 jugadores, online/local) accesible desde el PC del Pokémon Center. Requiere Environment Level 2 y ~30 min de juego.",
+      "sources": ["SRC009", "SRC012"]
+    },
+    {
+      "term": "GameShare",
+      "definition": "Modo de juego compartido: hasta 2 jugadores en Palette Town; solo el host necesita el juego.",
+      "sources": ["SRC012"]
+    },
+    {
+      "term": "Spectator Mode",
+      "definition": "Modo de observación en las áreas de historia durante el multiplayer.",
+      "sources": ["SRC009"]
+    },
+    {
+      "term": "Utility Pole",
+      "definition": "Poste que distribuye electricidad (~10 bloques de rango, ±5 verticales, hasta 20 conexiones).",
+      "sources": ["SRC028"]
+    },
+    {
+      "term": "Wireless Power Transmitter",
+      "definition": "Transmisor inalámbrico de electricidad de mayor alcance que atraviesa objetos; requiere Porygon.",
+      "sources": ["SRC028", "SRC051"]
+    },
+    {
+      "term": "Mini Generator",
+      "definition": "Generador básico de electricidad (5 unidades de energía).",
+      "sources": ["SRC028", "SRC057"]
+    },
+    {
+      "term": "Waterwheel",
+      "definition": "Generador de electricidad movido por agua fluyente (20 unidades).",
+      "sources": ["SRC028"]
+    },
+    {
+      "term": "Windmill",
+      "definition": "Generador eólico de electricidad (10/20 unidades según altitud).",
+      "sources": ["SRC028"]
+    },
+    {
+      "term": "Furnace (generador)",
+      "definition": "Generador de electricidad por combustible (30 unidades). No confundir con el Smelting Furnace.",
+      "sources": ["SRC028"]
+    },
+    {
+      "term": "Charging Station",
+      "definition": "Instalación que acumula electricidad para que Peakychu use Illuminate.",
+      "sources": ["SRC057"]
+    },
+    {
+      "term": "Smelting Furnace",
+      "definition": "Horno que transforma menas (Ore) en lingotes (Ingots) con la especialidad Burn.",
+      "sources": ["SRC037"]
+    },
+    {
+      "term": "Concrete Mixer",
+      "definition": "Máquina que convierte Limestone en Concrete con la especialidad Crush.",
+      "sources": ["SRC037"]
+    },
+    {
+      "term": "Rototiller",
+      "definition": "Movimiento de Ditto (aprendido de Drilbur) que remueve el suelo para plantar semillas. No funciona en tierra seca.",
+      "sources": ["SRC016", "SRC032"]
+    },
+    {
+      "term": "Water Basin",
+      "definition": "Instalación de riego/agua que usa la especialidad Water.",
+      "sources": ["SRC032"]
+    },
+    {
+      "term": "Sprinkler",
+      "definition": "Aspersor de riego automático (50 Life Coins).",
+      "sources": ["SRC032"]
+    },
+    {
+      "term": "Gourmet's Altar",
+      "definition": "Altar donde se ofrece comida a Mosslax para recibir buffs diarios según el sabor (hasta las 5:00 AM).",
+      "sources": ["SRC033"]
+    },
+    {
+      "term": "Team Initiation Challenge",
+      "definition": "Cadena final de entregas (8 o 9 etapas según la fuente) que parodia los Gym Badges; completa el juego.",
+      "sources": ["SRC038", "SRC042"]
+    },
+    {
+      "term": "Leppa Berry",
+      "definition": "Baya requerida en la etapa 1 del Team Initiation Challenge (5 o 10 según la fuente).",
+      "sources": ["SRC038"]
+    },
+    {
+      "term": "Doll (muñeco)",
+      "definition": "Objeto que determina a qué Dream Island viaja Ditto con Drifloon (Pikachu→Ocean, Eevee→Wasteland, Dragonite→Sky, Clefairy→Rock Peak, Arcanine→Volcanic, Starmie→Basin).",
+      "sources": ["SRC047"]
+    },
+    {
+      "term": "Bubbly Basin",
+      "definition": "Pueblo submarino del DLC Parte 1 (update 2.0.0, 5 ago 2026). Incluye sandías, smoothies, Sharpedo submarine y una Dream Island nueva.",
+      "sources": ["SRC013", "SRC014"]
+    },
+    {
+      "term": "Dive",
+      "definition": "Movimiento de Ditto para nadar y construir bajo el agua, aprendido de Manaphy en el update 2.0.0.",
+      "sources": ["SRC013"]
+    },
+    {
+      "term": "Expansion Pass",
+      "definition": "Pase de expansión de 3 partes del juego (Parte 1: Bubbly Basin 2026; Parte 2: finales 2026; Parte 3: 2027). Una compra da acceso a las tres.",
+      "sources": ["SRC013", "SRC060"]
+    },
+    {
+      "term": "Palette Town",
+      "definition": "Zona sandbox de construcción libre inspirada en Pallet Town, con Eevee. Disponible desde el inicio.",
+      "sources": ["SRC044"]
+    },
+    {
+      "term": "Building Kit",
+      "definition": "Receta/kit que permite construir casas y edificios consumiendo materiales.",
+      "sources": ["SRC001", "SRC037"]
+    },
+    {
+      "term": "Laser Sensor",
+      "definition": "Sensor activado por movimiento que puede combinarse con puertas, fluidos y switches para crear automatizaciones.",
+      "sources": ["SRC052", "SRC054"]
+    },
+    {
+      "term": "Switch",
+      "definition": "Interruptor eléctrico que conecta/desconecta flujo de energía.",
+      "sources": ["SRC052"]
+    },
+    {
+      "term": "Virtual Mode",
+      "definition": "Modo de juego en Cloud Islands que requiere Mysterious Goggles.",
+      "sources": ["SRC010", "SRC012"]
+    },
+    {
+      "term": "Mysterious Goggles",
+      "definition": "Objeto que habilita el Virtual Mode en Cloud Islands.",
+      "sources": ["SRC012"]
+    }
+  ]
+}

@@ -1,0 +1,345 @@
+{
+  "description": "Relaciones formales entre entidades del dominio Pokémon Pokopia (Fase 1 - Domain Research).",
+  "version": "1.0",
+  "date": "2026-08-15",
+  "relation_types": [
+    "aprende_de",
+    "se_aprende_en",
+    "requiere",
+    "construido_con",
+    "aparece_en",
+    "aparece_con_condiciones",
+    "potencia",
+    "restaura",
+    "atrae",
+    "influye_en",
+    "desbloquea",
+    "procesa",
+    "ubicado_en",
+    "ofrece",
+    "comercia",
+    "se_vende_en",
+    "aporta_a",
+    "exclusiva_de",
+    "lleva_a",
+    "requiere_para_usar",
+    "gate_de"
+  ],
+  "relations": [
+    {
+      "id": "R001",
+      "subject": "Ditto",
+      "predicate": "aprende_de",
+      "object": "Movimiento (Leafage)",
+      "detail": "Leafage se aprende al conocer a Bulbasaur",
+      "sources": ["SRC016"],
+      "status": "FACT"
+    },
+    {
+      "id": "R002",
+      "subject": "Ditto",
+      "predicate": "aprende_de",
+      "object": "Movimiento (Water Gun)",
+      "detail": "Water Gun se aprende al conocer a Squirtle en Withered Wasteland",
+      "sources": ["SRC016"],
+      "status": "FACT"
+    },
+    {
+      "id": "R003",
+      "subject": "Ditto",
+      "predicate": "aprende_de",
+      "object": "Movimiento (Surf)",
+      "detail": "Surf se aprende al conocer a Lapras en Bleak Beach",
+      "sources": ["SRC016"],
+      "status": "FACT"
+    },
+    {
+      "id": "R004",
+      "subject": "Ditto",
+      "predicate": "aprende_de",
+      "object": "Movimiento (Dive)",
+      "detail": "Dive se aprende al ayudar a Manaphy (update 2.0.0, DLC)",
+      "sources": ["SRC013"],
+      "status": "FACT"
+    },
+    {
+      "id": "R005",
+      "subject": "Pokémon",
+      "predicate": "atrae",
+      "object": "Otros Pokémon",
+      "detail": "Los hábitats atraen a las especies de Pokémon",
+      "sources": ["SRC017"],
+      "status": "FACT"
+    },
+    {
+      "id": "R006",
+      "subject": "Hábitat",
+      "predicate": "requiere",
+      "object": "Objetos construidos (crafting)",
+      "detail": "Un hábitat es una combinación de objetos construidos",
+      "sources": ["SRC017"],
+      "status": "FACT"
+    },
+    {
+      "id": "R007",
+      "subject": "Aparición de Pokémon",
+      "predicate": "depende_de",
+      "object": "Hora, clima y ubicación",
+      "detail": "La aparición salvaje varía según hora, clima y lugar; la oscuridad/luz invierte los ciclos",
+      "sources": ["SRC017"],
+      "status": "FACT"
+    },
+    {
+      "id": "R008",
+      "subject": "Comida (tipo)",
+      "predicate": "potencia",
+      "object": "Movimiento de Ditto",
+      "detail": "Salad→Leafage, Soup→Water Gun, Bread→Cut, Hamburger Steak→Rock Smash, Smoothie→Surf",
+      "sources": ["SRC016", "SRC033", "SRC013"],
+      "status": "FACT"
+    },
+    {
+      "id": "R009",
+      "subject": "Comida (flavor favorito)",
+      "predicate": "influye_en",
+      "object": "Comfort Level del Pokémon",
+      "detail": "Dar la comida del flavor favorito sube Comfort; el flavor no favorito lo baja",
+      "sources": ["SRC033", "SRC023"],
+      "status": "FACT"
+    },
+    {
+      "id": "R010",
+      "subject": "Comfort Level (suma)",
+      "predicate": "influye_en",
+      "object": "Environment Level del área",
+      "detail": "El Environment Level sube con la suma del Comfort de los Pokémon del área",
+      "sources": ["SRC023"],
+      "status": "FACT"
+    },
+    {
+      "id": "R011",
+      "subject": "Environment Level",
+      "predicate": "desbloquea",
+      "object": "PC Shop items, semillas, recetas, Building Kits",
+      "detail": "Semillas desde Env Level 3; el resto a lo largo de los niveles",
+      "sources": ["SRC032", "SRC023"],
+      "status": "FACT"
+    },
+    {
+      "id": "R012",
+      "subject": "Important Request",
+      "predicate": "influye_en",
+      "object": "Trainer Rank",
+      "detail": "Solo las Important Requests suben el Trainer Rank",
+      "sources": ["SRC019", "SRC034"],
+      "status": "FACT"
+    },
+    {
+      "id": "R013",
+      "subject": "Trainer Rank",
+      "predicate": "desbloquea",
+      "object": "Áreas (puertas verdes)",
+      "detail": "Great→Bleak Beach y Rocky Ridges; Ultra→Sparkling Skylands; Master→examinar la Master Ball en el Huge Building (hito final). C02/C03 resueltos en Fase 1 (Serebii + The Games Wiki).",
+      "sources": ["SRC034", "SRC044"],
+      "status": "FACT"
+    },
+    {
+      "id": "R014",
+      "subject": "Especialidad",
+      "predicate": "procesa",
+      "object": "Materiales",
+      "detail": "Cada especialidad procesa ciertos materiales (Chop→Lumber, Burn→Ingot, Recycle→Ore/Paper, Crush→Concrete, Rarify→Rare Pokemetal)",
+      "sources": ["SRC037", "SRC042"],
+      "status": "FACT"
+    },
+    {
+      "id": "R015",
+      "subject": "Smelting Furnace",
+      "predicate": "requiere",
+      "object": "Especialidad Burn",
+      "detail": "Para transformar Ore en Ingots",
+      "sources": ["SRC037"],
+      "status": "FACT"
+    },
+    {
+      "id": "R016",
+      "subject": "Especialidad",
+      "predicate": "exclusiva_de",
+      "object": "NPC",
+      "detail": "DJ→DJ Rotom, Illuminate→Peakychu, Eat→Mosslax, Appraise→Profesor Tangrowth, Engineer→Tinkmaster, Party→Chef Dente, Transform→Ditto, Dream Island→Drifloon, Gather Honey→Vespiquen",
+      "sources": ["SRC042", "SRC036"],
+      "status": "FACT"
+    },
+    {
+      "id": "R017",
+      "subject": "Rototiller",
+      "predicate": "requiere",
+      "object": "Suelo regado",
+      "detail": "Rototiller no funciona en tierra seca; hay que regar antes",
+      "sources": ["SRC032"],
+      "status": "FACT"
+    },
+    {
+      "id": "R018",
+      "subject": "Generador eléctrico",
+      "predicate": "procesa",
+      "object": "Electricidad",
+      "detail": "Mini Generator (5), Windmill (10/20), Waterwheel (20), Furnace (30)",
+      "sources": ["SRC028", "SRC057"],
+      "status": "FACT"
+    },
+    {
+      "id": "R019",
+      "subject": "Utility Pole / Transmitter",
+      "predicate": "distribuye",
+      "object": "Electricidad",
+      "detail": "Utility Pole ~10 bloques/±5 verticales/20 conexiones; Wireless Power Transmitter atraviesa objetos y requiere Porygon",
+      "sources": ["SRC028", "SRC051"],
+      "status": "FACT"
+    },
+    {
+      "id": "R020",
+      "subject": "Drifloon",
+      "predicate": "lleva_a",
+      "object": "Dream Islands",
+      "detail": "Una visita por día; la isla depende del muñeco (doll)",
+      "sources": ["SRC022", "SRC047"],
+      "status": "FACT"
+    },
+    {
+      "id": "R021",
+      "subject": "Muñeco (doll)",
+      "predicate": "determina",
+      "object": "Dream Island",
+      "detail": "Pikachu→Ocean, Eevee→Wasteland, Dragonite→Sky, Clefairy→Rock Peak, Arcanine→Volcanic, Starmie→Basin",
+      "sources": ["SRC047"],
+      "status": "FACT"
+    },
+    {
+      "id": "R022",
+      "subject": "Dream Islands",
+      "predicate": "ofrece",
+      "object": "Recursos raros",
+      "detail": "Stardust, Pokemetal, Rare Pokemetal, Crystal Fragments; posibilidad de legendarios",
+      "sources": ["SRC022", "SRC048"],
+      "status": "FACT"
+    },
+    {
+      "id": "R023",
+      "subject": "Legendarios",
+      "predicate": "aporta_a",
+      "object": "Environment Level",
+      "detail": "Los legendarios aportan más puntos de Environment al subir su Comfort",
+      "sources": ["SRC023", "SRC045"],
+      "status": "FACT"
+    },
+    {
+      "id": "R024",
+      "subject": "Cooking",
+      "predicate": "desbloquea",
+      "object": "Chef Dente (quest Time to Party!)",
+      "detail": "La cocina se desbloquea al rescatar a Chef Dente en Rocky Ridges",
+      "sources": ["SRC033", "SRC049"],
+      "status": "FACT"
+    },
+    {
+      "id": "R025",
+      "subject": "Bread Oven",
+      "predicate": "requiere",
+      "object": "Especialidad Burn",
+      "detail": "El horno de pan necesita un Pokémon con Burn",
+      "sources": ["SRC049"],
+      "status": "FACT"
+    },
+    {
+      "id": "R026",
+      "subject": "Bubbly Basin (DLC)",
+      "predicate": "gate_de",
+      "object": "Request 'Raise the environment level!' + Dive",
+      "detail": "Acceso al pueblo submarino tras cumplir la request en Bleak Beach y aprender Dive",
+      "sources": ["SRC008", "SRC013"],
+      "status": "FACT"
+    },
+    {
+      "id": "R027",
+      "subject": "Link Play",
+      "predicate": "requiere",
+      "object": "Environment Level 2 y ~30 min de juego",
+      "detail": "Condiciones de desbloqueo del multiplayer",
+      "sources": ["SRC009"],
+      "status": "FACT"
+    },
+    {
+      "id": "R028",
+      "subject": "GameShare",
+      "predicate": "requiere_para_usar",
+      "object": "Palette Town",
+      "detail": "GameShare solo funciona en Palette Town; hasta 2 jugadores; solo el host necesita el juego",
+      "sources": ["SRC012"],
+      "status": "FACT"
+    },
+    {
+      "id": "R029",
+      "subject": "Eventos",
+      "predicate": "requiere",
+      "object": "Moneda de evento (Dream Islands)",
+      "detail": "Los eventos limitados usan moneda de evento obtenida en Dream Islands; el Pokémon reclutado se queda",
+      "sources": ["SRC029"],
+      "status": "FACT"
+    },
+    {
+      "id": "R030",
+      "subject": "Smearguru",
+      "predicate": "procesa",
+      "object": "Muebles (Paint)",
+      "detail": "Smearguru pinta y re-pinta muebles con su especialidad Paint",
+      "sources": ["SRC036"],
+      "status": "FACT"
+    },
+    {
+      "id": "R031",
+      "subject": "Mosslax",
+      "predicate": "ofrece",
+      "object": "Buff diario (Gourmet's Altar)",
+      "detail": "Buff según el flavor de la comida ofrecida; dura hasta las 5:00 AM",
+      "sources": ["SRC033"],
+      "status": "FACT"
+    },
+    {
+      "id": "R032",
+      "subject": "Charging Station",
+      "predicate": "requiere",
+      "object": "Electricidad (para Peakychu/Illuminate)",
+      "detail": "Acumula electricidad para que Peakychu use Illuminate",
+      "sources": ["SRC057"],
+      "status": "FACT"
+    },
+    {
+      "id": "R033",
+      "subject": "Área",
+      "predicate": "inspirada_en",
+      "object": "Ciudad de Kanto",
+      "detail": "Wastelands≈Fuchsia (CONFIRMADO por Serebii: era la antigua Ciudad Fucsia), Beach≈Vermilion, Ridges≈Pewter, Skylands≈Celadon/Saffron, Palette≈Pallet. Contexto: Kanto tras HeartGold & SoulSilver.",
+      "sources": ["SRC044", "SRC061", "SRC068", "SRC066"],
+      "status": "FACT"
+    },
+    {
+      "id": "R034",
+      "subject": "Área",
+      "predicate": "requiere",
+      "object": "Important Request + Pokémon Center reconstruido + Environment Level 5",
+      "detail": "Cada área de historia exige cumplir su Important Request, reconstruir su Pokémon Center y subir el Environment Level a 5 para completarse. C02 resuelto.",
+      "sources": ["SRC034", "SRC023"],
+      "status": "FACT"
+    },
+    {
+      "id": "R035",
+      "subject": "Important Request",
+      "predicate": "desbloquea",
+      "object": "Environment Level y Trainer Rank",
+      "detail": "Completar una Important Request sube el Environment Level del área y el Trainer Rank del jugador.",
+      "sources": ["SRC019", "SRC034"],
+      "status": "FACT"
+    }
+  ]
+}

@@ -79,7 +79,7 @@ MOVIMIENTO
 1. `Semillas (Env Level 3) → Cultivar → Ingrediente → Receta → Comida (flavor) → Comfort de Pokémon → Environment Level del área`
 2. `Hábitat → Requisito de luz/clima → Pokémon aparece → Request → Trainer Rank → Puerta de área`
 3. `Material (región) → Especialidad → Procesado → Componente → Edificio/hábitat`
-4. `Generador (fuente) → Límites (64 gen, 1024 items) → Máquina/hábitat eléctrico`
+4. `Generador (fuente) → Límites (VERSIONADOS: 64 gen/512 items en 1.0.x; 64 gen/1024 items en 1.1.0–1.1.1; 128 gen excl. furnaces/1024 items en 2.0.0+; ver C05) → Máquina/hábitat eléctrico`
 5. `Muñeco (doll) → Dream Island concreta → Recurso raro / legendario`
 
 **Relaciones condicionales / con matiz:**
@@ -96,7 +96,7 @@ MOVIMIENTO
 | Desbloqueo de áreas | Por Trainer Rank + requests | Por % de restauración (40%) | C02 |
 | Nombres de Trainer Rank | Great / Ultra / Master | Super / Hyper | C03 |
 | Conversión Ingot→Tinkagear | 2:1 | 1:3 | C04 |
-| Límites eléctricos | 64 gen / 1024 items | otras cifras | C05 |
+| Límites eléctricos | 64 gen / 1024 items | otras cifras | C05 — PARTIALLY CONFIRMED (Fase 1.5): versionado 64→128 gen; 512→1024 items |
 | Etapas del Team Initiation Challenge | 8 | 9 | C06 |
 | Nº de legendarios/míticos | 12 | 14 | C07 |
 

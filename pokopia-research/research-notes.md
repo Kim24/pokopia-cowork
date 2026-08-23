@@ -290,3 +290,26 @@ Tras este cierre documental siguen existiendo los siguientes límites del **proc
 - **UNKNOWN sin log de intentos**: no se documentó exactamente qué se buscó para cada contradicción no resuelta.
 
 Estas limitaciones quedan **registradas como posibles mejoras futuras** (provenance por fila, quotes/snapshots, jerarquía fina de evidencia, `status` en glosario, rediseño del catálogo), no como pendientes obligatorios de esta fase.
+
+---
+
+## 15. Fase 1.5 — Knowledge Hardening (C05) y generalización (2026-08-15)
+
+**Objetivo:** endurecer el claim C05 (límites eléctricos) con evidencia primaria y generalizar los aprendizajes al corpus sin rediseño.
+
+**Hardening de C05 (blind research + verificación adversarial):**
+
+1. **Blind research** (sin aceptar conclusiones de Fase 1): los límites eléctricos son **version-dependent**; se construyó la línea temporal: 1.0.x = 64 gen/512 items; 1.1.0–1.1.1 = 64 gen/1.024 items; 2.0.0+ = 128 gen **excl. furnaces**/1.024 items.
+2. **Verificación adversarial** (2026-08-15, fetch directo de la primaria): Nintendo Support a_id/71348 (SRC070) confirma verbatim el cambio 512→1.024 (1.1.0) y 64→128 excl. furnaces (2.0.0, liberado 4 ago 2026); Serebii patch log (SRC071) transcribe lo mismo (fechas ±1 día por zona horaria). **Hallazgo clave:** los 12+ medios que citaron el cambio 64→128 son **DERIVED** de la misma nota oficial — no constituyen corroboración independiente; no existe verificación observacional publicada post-2.0.0.
+3. **Conclusión epistemológica:** C05 → **PARTIALLY_CONFIRMED** (nuevo valor de resolución) con subclaims versionados; **UNKNOWN explícitos** para la semántica de "excl. furnaces" y el tope de 256 transmisores. Se registra la nueva candidata **C11** (output del Furnace: 30 vs 15–25, detectada durante el hardening).
+
+**Generalización (regla de no-propagar sin evidencia):**
+
+- **P0 (justificado por el corpus):** C05, RULE019 (regla versionada con `applicable_versions`), gaps.md (fila C05 + prioridades), domains.md §10 (límites versionados).
+- **P1 (justificado por evidencia ya resuelta en Fase 1):** domains.md §3/§13 y glossary (Comfort, TIC, Leppa) alineados con C06/C08/RULE024; README (conteo 69→71 fuentes, RULE019, C05); domain-map/relationships.md §4/§5; relationships.json R018/R019 (caveats); Q13 (version_note, estrictamente necesario); `aggregation_note` en las 9 entradas de sources.json que agregan editores (evita doble conteo tipo C05, p. ej. [SRC028, SRC051] donde SRC051 ya incluye Serebii).
+- **No implementado (P2):** quotes/snapshots por claim, `applicable_versions` universal, versionado por fila en pokemon-catalog, división de entradas agregadas en fuentes individuales.
+- **No tocado:** `phase1-consolidation-report.md` y la §13 (snapshots históricos de Fase 1; la §13 quedó superada por esta sección en lo referente a C05), C04/C10 (sin evidencia nueva), Q14/Q22 (ya DLC-aware), `git_github_guia_pokopia.md`.
+
+**Artefactos modificados en Fase 1.5:** `contradictions/contradictions.json` (C05, +C11), `rules/rules.json` (RULE019, RULE020), `knowledge-gaps/gaps.md`, `sources/sources.json` (+SRC070/SRC071, aggregation_note ×9), `domain-map/domains.md`, `concepts/glossary.json`, `relationships/relationships.json`, `domain-map/relationships.md`, `candidate-questions/questions.md`, `research-notes.md` (esta sección), `README.md`.
+
+**Sin commits ni push.**

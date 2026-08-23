@@ -77,7 +77,7 @@ Ditto aprende **movimientos** al conocer a ciertos Pokémon; cada movimiento usa
 
 - Las **especialidades** son "roles de trabajo" que cada Pokémon realiza tras ser reclutado. **No son habilidades (abilities)** y no se pueden aprender [SRC032, SRC042].
 - No hay combate: cada Pokémon contribuye con trabajo práctico [SRC042].
-- Serebii documenta al menos: **Burn, Chop, Crush, Grow** [SRC018]. La lista agregada de guías incluye ~31: Appraise, Build, Bulldoze, Burn, Chop, Collect, Crush, Dream Island, DJ, Eat, Engineer, Explode, Fly, Gather, Gather Honey, Generate, Grow, Hype, Illuminate, Litter, Paint, Party, Rarify, Recycle, Scrub, Search, Storage, Teleport, Trade, Transform, Water, Yawn [SRC042, SRC048].
+- Serebii documenta al menos: **Burn, Chop, Crush, Grow** [SRC018]. La lista agregada de guías incluye ~31: Appraise, Build, Bulldoze, Burn, Chop, Collect, Crush, Dream Island, DJ, Eat, Engineer, Explode, Fly, Gather, Gather Honey, Generate, Grow, Hype, Illuminate, Litter, Paint, Party, Rarify, Recycle, Search, Storage, Teleport, Trade, Transform, Water, Yawn [SRC042, SRC048]. ('Scrub' NO es una especialidad; ver C08.)
 - Algunos Pokémon tienen **doble especialidad** (p. ej. Machop: Build + Gather; Pidgey: Fly + Search; Bellsprout: Grow + Litter; Slowpoke: Water + Yawn) [SRC042].
 - Varias especialidades son **exclusivas de NPCs** (DJ → Stereo Rotom; Illuminate → Peakychu; Eat → Mosslax; Appraise → Profesor Tangrowth; Engineer → Tinkmaster; Party → Chef Dente; Transform → Ditto; Dream Island → Drifloon; Gather Honey → Vespiquen) [SRC042, SRC036].
 
@@ -146,7 +146,7 @@ Ditto aprende **movimientos** al conocer a ciertos Pokémon; cada movimiento usa
 - La electricidad se genera con: **Mini Generator** (5 unidades), **Windmill** (10/20 según altitud), **Waterwheel** (20), **Furnace** (30, requiere combustible) [SRC028, SRC057].
 - Los Pokémon con especialidad **Generate** pueden energizar temporalmente objetos [SRC057].
 - Distribución con **Utility Poles** (rango ~10 bloques, ±5 verticales, hasta 20 conexiones) y **Wireless Power Transmitters** (mayor alcance, atraviesa objetos; requiere Porygon) [SRC028, SRC051].
-- **Límites:** máximo 64 generadores por zona (combinación); no más de 1024 objetos eléctricos a la vez [SRC028]. (Existen otras cifras citadas por la comunidad — ver C05.)
+- **Límites (VERSIONADOS, C05 PARTIALLY CONFIRMED en Fase 1.5):** generadores: 64 por zona (1.0.x–1.1.1) → **128 excluyendo furnaces** (2.0.0+, nota oficial); objetos eléctricos: 512 (1.0.x) → **1.024** (1.1.0+; sin cambio en 2.0.0) [SRC028, SRC070, SRC071]. La semántica de "excl. furnaces" y el tope de 256 transmisores por zona siguen **UNKNOWN** (ver C05).
 - El agua fluye por gravedad; las **waterwheels** necesitan agua fluyendo; hay tuberías de hierro para encauzar líquidos verticalmente [SRC041].
 - **Charging Station** acumula electricidad para que Peakychu use Illuminate [SRC057].
 
@@ -176,7 +176,7 @@ Ditto aprende **movimientos** al conocer a ciertos Pokémon; cada movimiento usa
 
 - **Trainer Rank:** No rank → Great → Ultra → Master. Sube solo con Important Requests. Great abre Bleak Beach y Rocky Ridges; Ultra abre Sparkling Skylands; Master = hito final (sin área nueva) [SRC034]. ⚠️ Los nombres de los rangos difieren entre fuentes (ver C03).
 - **Environment Level (por área):** 1→10. Sube con la suma de Comfort de los Pokémon del área. Nivel 5 requerido en cada área para el final; nivel 10 = máx [SRC023, SRC040]. Puede **bajar** [SRC023].
-- **Comfort Level (por Pokémon):** 6 estados: No Home, Iffy, Average, Nice, Great, Awesome. Se sube con hábitats/casas adecuados, muebles que le gustan, comida del flavor preferido, gifts, requests, mini-juegos [SRC023, SRC040, SRC045].
+- **Comfort Level (por Pokémon):** 5 niveles + Comfy 0 (sin hogar): Iffy, Average, Nice, Great, Awesome (el "No Home" no es un nivel, es ausencia de hogar) [SRC023, SRC040, SRC045]. Se sube con hábitats/casas adecuados, muebles que le gustan, comida del flavor preferido, gifts, requests, mini-juegos.
 - **Friendship (vínculo con Ditto):** separada del Comfort; sube con requests y gifts; al máximo el Pokémon te llama por tu nombre y te considera "best friend" (marca en la Pokédex) [SRC024].
 - **PP (energía de movimientos):** medidor de PP; se restaura en el Pokémon Center, con comida o ingredientes; PP Up aumenta el máximo [SRC035, SRC016].
 - **Team Initiation Challenge:** cadena final de entregas (8 o 9 etapas según la fuente — ver C06) con badges que parodian los Gym Badges de Kanto; completarla dispara los créditos [SRC038, SRC042].

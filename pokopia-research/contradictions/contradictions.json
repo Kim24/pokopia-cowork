@@ -57,16 +57,16 @@
     },
     {
       "id": "C05",
-      "topic": "Límites del sistema eléctrico",
+      "topic": "Límites del sistema eléctrico (versionados)",
       "claim_a": "Máximo 64 generadores y 1024 objetos eléctricos simultáneos por zona.",
       "claim_b": "Otras cifras citadas por la comunidad (p. ej. menos objetos eléctricos, límites por tipo de generador).",
-      "evidence_a": "Guías de electricidad (Serebii/Fextralife).",
-      "evidence_b": "Posts de Reddit/prensa con valores distintos.",
-      "sources": ["SRC028", "SRC051"],
-      "resolution": "UNKNOWN",
-      "resolution_detail": "Sin evidencia nueva en Fase 1. Dato indirecto relevante: la etapa 5 del Team Initiation Challenge requiere 50 Electricity, 10 Crystal Fragments y 5 Tinkagears; la etapa 7 exige Environment Level 5 en tres áreas.",
-      "impact": "Media: límites exactos son útiles para automatización avanzada.",
-      "recommendation": "Confirmar con pruebas de la comunidad y documentación oficial."
+      "evidence_a": "Guías de electricidad (Serebii/Fextralife); Serebii electricity refleja el estado 1.1.x (64 gen/1024 items).",
+      "evidence_b": "Notas oficiales de parche (Nintendo Support) y prensa: 512 items en 1.0.x; 128 generadores excl. furnaces desde 2.0.0.",
+      "sources": ["SRC028", "SRC051", "SRC070", "SRC071"],
+      "resolution": "PARTIALLY_CONFIRMED",
+      "resolution_detail": "Hardening Fase 1.5 (blind research + verificación adversarial con fetch directo de la fuente primaria, 2026-08-15). Los límites son VERSION-DEPENDIENTES (explicación por version drift, no por error de fuente): (a) Lanzamiento 1.0.x = 64 generadores / 512 objetos eléctricos; (b) 1.1.0-1.1.1 = 64 generadores / 1.024 objetos (cambio 512→1.024, nota oficial SRC070); (c) 2.0.0+ = 128 generadores EXCLUYENDO furnaces / 1.024 objetos (nota oficial: 'Increased the placement limit for power generators (excluding furnaces) from 64 to 128'). La redacción 'excluding furnaces' es ambigua: no está verificado si los furnaces cuentan contra el tope de 128, tienen tope propio o están exentos → FURNACE-SPECIFIC SEMANTICS = UNKNOWN. El tope de 256 dispositivos de transmisión por zona solo consta en guías terciarias (Serebii, popcultdaily, PokopiaMap) → UNKNOWN (sin fuente primaria). Los 12+ medios que citan el cambio 64→128 son reproducciones (DERIVED) de la misma nota oficial, no corroboración independiente; no existe verificación observacional publicada post-2.0.0. El claim_a tal como está redactado (64 gen + 1024 items) es verdadero SOLO en la ventana 1.1.0-1.1.1: falso en 1.0.x (1024) y en 2.0.0+ (64).",
+      "impact": "Media: límites exactos son útiles para automatización avanzada; las respuestas cuantitativas deben anclar la versión del juego.",
+      "recommendation": "Responder por versión: 1.0.x=64/512; 1.1.0-1.1.1=64/1.024; 2.0.0+=128 excl. furnaces/1.024. Mantener UNKNOWN explícito para la semántica de furnaces y el tope de 256 transmisores. Verificar en partida (test de colocación) y con las notas oficiales en japonés."
     },
     {
       "id": "C06",
@@ -132,6 +132,19 @@
       "resolution_detail": "Diferencia de 1 día (posible zona horaria local vs global, o diferencia de versión). Contradicción menor sin impacto en el dominio.",
       "impact": "Baja: solo afecta a preguntas sobre fechas exactas de evento.",
       "recommendation": "Mantener ambas fechas anotadas como rango (9–25 mar 2026) hasta verificar con fuente oficial."
+    },
+    {
+      "id": "C11",
+      "topic": "Output del Furnace como generador eléctrico",
+      "claim_a": "El Furnace produce 30 unidades de electricidad (con combustible).",
+      "claim_b": "El Furnace produce aproximadamente 15-25 unidades.",
+      "evidence_a": "Serebii (SRC028) y Vandal (SRC057): 30 unidades.",
+      "evidence_b": "The Games Wiki (SRC041): 'aprox. 15-25'.",
+      "sources": ["SRC028", "SRC057", "SRC041"],
+      "resolution": "UNKNOWN",
+      "resolution_detail": "Candidata registrada durante el hardening de C05 (Fase 1.5): forma parte de la incertidumbre furnace-specific. Sin fuente primaria; no se resuelve automáticamente. Posible explicación temporal no verificada (versión de guía o medición aproximada).",
+      "impact": "Baja-Media: afecta cálculos de capacidad eléctrica por zona (en combinación con C05) y a GAP-07.",
+      "recommendation": "Verificar en partida (colocar un Furnace y medir las unidades) o con la tabla eléctrica oficial de Serebii actualizada."
     }
   ]
 }

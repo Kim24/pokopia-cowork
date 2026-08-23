@@ -179,12 +179,13 @@
 - **concepts_required:** electricidad, límites
 - **entities_required:** Windmill, Waterwheel, Mini Generator
 - **relationships_required:** R018, R019
-- **sources_required:** SRC028
+- **sources_required:** SRC028, SRC070, SRC071
 - **requires_multi_hop:** false
 - **requires_structured_data:** true
 - **requires_case_memory:** false
 - **expected_difficulty:** medium
 - **why_this_question_is_interesting:** Combina aritmética y razonamiento sobre restricciones de diseño. Depende de C05 (resolver antes).
+- **version_note:** Premisa VERSIONADA (C05 PARTIALLY CONFIRMED, Fase 1.5): la premisa "64 gen/1024 items" es válida solo en 1.1.0–1.1.1; en 1.0.x era 64/512 y desde 2.0.0+ es 128 gen excl. furnaces/1.024 items. Para el Gold Dataset debe fijarse la versión del juego en el enunciado o parametrizarse la aritmética.
 
 ### Q14
 - **question:** ¿Qué condiciones debe cumplir un jugador para acceder a Bubbly Basin? Enumera todas las condiciones de juego, no solo la compra del DLC.
@@ -402,5 +403,7 @@
 ## Notas para Fase 2
 
 - Las preguntas **Q13, Q19, Q20, Q21, Q22, Q27, Q28** dependen de la **resolución de contradicciones** (C01–C09) o de datos estructurados todavía no consolidados (GAP-03, GAP-05, GAP-07).
+- **Q13 (C05, Fase 1.5):** la premisa es versionada (64 gen/1024 items solo en 1.1.0–1.1.1; ver `version_note` de Q13). Las respuestas cuantitativas sobre límites deben anclar la versión del juego (1.0.x / 1.1.0–1.1.1 / 2.0.0+).
+- **Q23:** al citar RULE019 debe usarse la versión vigente (128 gen excl. furnaces / 1.024 items en 2.0.0+); el tope de 256 transmisores no está verificado.
 - Antes de convertirlas en Gold Dataset, se debe decidir el **formato de respuesta esperada** (abierta vs opción múltiple vs numérica) y el **método de scoring** (manual vs LLM-as-judge).
 - Las categorías `multi_hop`, `constraint`, `comparison`, `contradiction` y `novel_creative` cubren los cinco tipos de razonamiento que se quieren evaluar.

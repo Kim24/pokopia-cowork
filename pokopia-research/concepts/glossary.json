@@ -60,7 +60,7 @@
     },
     {
       "term": "Comfort Level",
-      "definition": "Estado de comodidad de cada Pokémon (No Home, Iffy, Average, Nice, Great, Awesome). Alimenta el Environment Level del área.",
+      "definition": "Estado de comodidad de cada Pokémon (5 niveles: Iffy, Average, Nice, Great, Awesome; sin hábitat = Comfy 0, el 'No Home' no es un nivel). Alimenta el Environment Level del área.",
       "sources": ["SRC023", "SRC040"]
     },
     {
@@ -195,12 +195,12 @@
     },
     {
       "term": "Team Initiation Challenge",
-      "definition": "Cadena final de entregas (8 o 9 etapas según la fuente) que parodia los Gym Badges; completa el juego.",
+      "definition": "Cadena final de entregas (9 retos según Serebii; The Games Wiki fusiona los retos 8-9 contando 8, C06 resuelto) que parodia los Gym Badges; completa el juego.",
       "sources": ["SRC038", "SRC042"]
     },
     {
       "term": "Leppa Berry",
-      "definition": "Baya requerida en la etapa 1 del Team Initiation Challenge (5 o 10 según la fuente).",
+      "definition": "Baya requerida en la etapa 1 del Team Initiation Challenge (5 unidades, C06 resuelto).",
       "sources": ["SRC038"]
     },
     {

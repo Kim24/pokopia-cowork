@@ -3,6 +3,7 @@
 > **Pokopia Intelligence Lab — Domain Research Agent**
 > Fase 1 · Domain Research: Mapa de conocimiento del dominio **Pokémon Pokopia** (vida de simulación, Nintendo Switch 2).
 > Fase 1 · Consolidación: (catálogo de 300 Pokémon, contradicciones P0, progresión de áreas/rank).
+> Fase 1.5 · Knowledge Hardening: (C05 resuelta por versionado, generalización de aprendizajes — 2026-08-15).
 > Fecha: 2026-08-15 · Repo: `D:\repositorios\pokopia-cowork`
 
 ---
@@ -13,7 +14,7 @@ Pokémon Pokopia es el **primer juego de simulación de vida** de la franquicia 
 
 El jugador interpreta a un **Ditto transformado en humano** que despierta en un Kanto abandonado y marchito (post **HeartGold & SoulSilver**), conoce al **Profesor Tangrowth** (el último habitante) y reconstruye la zona construyendo hábitats, cultivando, cocinando, recolectando y cumpliendo peticiones. **No hay combates**: toda la progresión es de mundo, con un sistema rico de entidades interconectadas que lo convierte en un caso excelente para razonamiento multi-hop.
 
-Este paquete entrega un **mapa de conocimiento trazable y verificable** (hechos con fuente, jerarquía de evidencia FACT/INFERENCE/STRATEGY/UNKNOWN): inventario de **69 fuentes**, **catálogo íntegro de 308 entradas Pokémon** (`entities/pokemon-catalog.md`, validado contra The Games Wiki), catálogo de entidades y sistemas, **36 reglas**, **35 relaciones formales**, **10 contradicciones documentadas (6 resueltas en Fase 1)**, knowledge gaps y **28 preguntas candidatas** para un futuro Gold Dataset.
+Este paquete entrega un **mapa de conocimiento trazable y verificable** (hechos con fuente, jerarquía de evidencia FACT/INFERENCE/STRATEGY/UNKNOWN): inventario de **71 fuentes**, **catálogo íntegro de 308 entradas Pokémon** (`entities/pokemon-catalog.md`, validado contra The Games Wiki), catálogo de entidades y sistemas, **36 reglas**, **35 relaciones formales**, **11 contradicciones documentadas (6 resueltas en Fase 1, C05 parcialmente confirmada por versionado en Fase 1.5)**, knowledge gaps y **28 preguntas candidatas** para un futuro Gold Dataset.
 
 > 📄 **Reporte de consolidación (Fase 1)**: ver `phase1-consolidation-report.md` (qué quedó confirmado, qué cambió, qué sigue desconocido).
 
@@ -94,14 +95,14 @@ Ejemplos destacados:
 - La aparición depende de hora/clima/luz (RULE006).
 - Cada tipo de comida potencia un movimiento y restaura PP (RULE010).
 - Semillas desbloqueables con Environment Level 3 (RULE014).
-- Límite eléctrico: 64 generadores y 1024 objetos eléctricos (RULE019, INFERENCE).
+- Límite eléctrico: versionado — 64 gen/512 items (1.0.x), 64 gen/1024 items (1.1.0–1.1.1), 128 gen excl. furnaces/1024 items (2.0.0+) (RULE019, FACT; C05 PARTIALLY CONFIRMED).
 - Trainer Rank sube solo con Important Requests (RULE021).
 
 ---
 
 ## Sources
 
-Inventario completo con esquema (source_id, title, url, publisher, source_type, publication_date, retrieved_at, topics, entities, confidence) en **`sources/sources.json`**: **64 fuentes (SRC001–SRC064)**.
+Inventario completo con esquema (source_id, title, url, publisher, source_type, publication_date, retrieved_at, topics, entities, confidence) en **`sources/sources.json`**: **71 fuentes (SRC001–SRC071)**.
 
 | Nivel | Tipo | Fuentes | Confianza |
 |---|---|---|---|
@@ -116,7 +117,7 @@ Inventario completo con esquema (source_id, title, url, publisher, source_type, 
 
 ## Contradictions
 
-**10 contradicciones** documentadas en `contradictions/contradictions.json` (6 resueltas en Fase 1; resolución con evidencia en `phase1-consolidation-report.md`):
+**11 contradicciones** documentadas en `contradictions/contradictions.json` (6 resueltas en Fase 1; **C05 PARTIALLY CONFIRMED por versionado en Fase 1.5**; +C11 candidata nueva):
 
 | ID | Tema | A vs B | Estado |
 |---|---|---|---|
@@ -124,12 +125,13 @@ Inventario completo con esquema (source_id, title, url, publisher, source_type, 
 | C02 | Desbloqueo de áreas | Trainer Rank vs % de restauración / 'Hyper' | RESUELTA — Request + Centro + Env Lv.5 |
 | C03 | Nombres de Trainer Rank | Great/Ultra/Master vs Super/Hyper | RESUELTA — No Rank→Great→Ultra→Master |
 | C04 | Tasa Tinkagear | 2:1 vs 1:3 | UNKNOWN |
-| C05 | Límites eléctricos | 64/1024 vs otros | UNKNOWN |
+| C05 | Límites eléctricos | 64/1024 vs otros | PARTIALLY CONFIRMED — versionado (64→128 gen; 512→1024 items); furnace y 256 transmisores UNKNOWN |
 | C06 | Etapas del TIC | 8 vs 9 (5 vs 10 Leppa) | RESUELTA — 9 retos; etapa 1 = 5 Leppa |
 | C07 | Nº de legendarios | 12 vs 14 | RESUELTA CON CRITERIO — 12 base / 14 con DLC |
 | C08 | Nº de especialidades | 29 vs 31+ | RESUELTA — 31 |
 | C09 | Roster | 300 vs 423 | RESUELTA — 300 |
 | C10 | Fechas evento Hoppip | 10–25 vs 9–24 mar 2026 | UNKNOWN (menor) |
+| C11 | Output del Furnace (generador) | 30 vs 15–25 | UNKNOWN (candidata Fase 1.5) |
 
 ---
 
@@ -138,7 +140,7 @@ Inventario completo con esquema (source_id, title, url, publisher, source_type, 
 Gaps en `knowledge-gaps/gaps.md`, priorizados tras la consolidación de Fase 1:
 - **Resueltos/parciales en Fase 1**: GAP-02 (mecánica de bajada del Env Level), GAP-03 (catálogo 300 ✅ `pokemon-catalog.md`), GAP-01 (mecánica Env Level, faltan cifras), GAP-04 (tablas de desbloqueo ✅, faltan costes).
 - **P1**: tabla de 24 recetas (GAP-05); costes de Building Kits (GAP-04); tabla de electricidad (GAP-07).
-- **P2**: umbrales numéricos de Environment Level (GAP-01), tabla de trueque (GAP-06), contenido de DLC 2/3 (GAP-09), C04/C05/C10.
+- **P2**: umbrales numéricos de Environment Level (GAP-01), tabla de trueque (GAP-06), contenido de DLC 2/3 (GAP-09), C04/C10; restos de C05 (semántica de furnaces, tope 256 transmisores) y C11 (output del Furnace).
 
 ---
 

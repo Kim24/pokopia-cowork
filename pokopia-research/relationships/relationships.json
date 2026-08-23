@@ -184,7 +184,7 @@
       "subject": "Generador eléctrico",
       "predicate": "procesa",
       "object": "Electricidad",
-      "detail": "Mini Generator (5), Windmill (10/20), Waterwheel (20), Furnace (30)",
+      "detail": "Mini Generator (5), Windmill (10/20), Waterwheel (20), Furnace (30). ⚠️ El output del Furnace está en disputa (15–25 según The Games Wiki; ver C11).",
       "sources": ["SRC028", "SRC057"],
       "status": "FACT"
     },
@@ -193,7 +193,7 @@
       "subject": "Utility Pole / Transmitter",
       "predicate": "distribuye",
       "object": "Electricidad",
-      "detail": "Utility Pole ~10 bloques/±5 verticales/20 conexiones; Wireless Power Transmitter atraviesa objetos y requiere Porygon",
+      "detail": "Utility Pole ~10 bloques/±5 verticales/20 conexiones; Wireless Power Transmitter atraviesa objetos y requiere Porygon. El tope de 256 dispositivos de transmisión por zona es un subclaim aparte y NO verificado (UNKNOWN, ver C05).",
       "sources": ["SRC028", "SRC051"],
       "status": "FACT"
     },

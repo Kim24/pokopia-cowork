@@ -139,15 +139,17 @@
     {
       "id": "RULE019",
       "category": "Electricidad",
-      "rule": "Límites de energía por zona: máximo 64 generadores y no más de 1024 objetos eléctricos a la vez.",
-      "detail": "Cifra sujeta a verificación (ver contradicciones C05).",
-      "sources": ["SRC028"],
-      "status": "INFERENCE"
+      "rule": "Límites de colocación por zona, VERSIONADOS: generadores: 64 (1.0.x-1.1.1) → 128 excluyendo furnaces (2.0.0+); objetos eléctricos: 512 (1.0.x) → 1.024 (1.1.0+).",
+      "detail": "C05 PARTIALLY CONFIRMED (Fase 1.5): cifras confirmadas por notas oficiales (SRC070) y Serebii patch log (SRC071); Serebii electricity (SRC028) refleja el estado 1.1.x. Subclaims con estado epistémico distinto: el tope de 256 dispositivos de transmisión por zona es UNKNOWN (solo guías terciarias) y la semántica de 'excl. furnaces' es UNKNOWN (¿los furnaces cuentan contra los 128, tienen tope propio o están exentos?). El límite de 1.024 ítems no cambió en 2.0.0.",
+      "sources": ["SRC028", "SRC070", "SRC071"],
+      "status": "FACT",
+      "applicable_versions": ["1.0.x", "1.1.0", "1.1.1", "2.0.0"]
     },
     {
       "id": "RULE020",
       "category": "Electricidad",
       "rule": "Utility Poles y Wireless Power Transmitters distribuyen electricidad; cada uno conecta hasta 20 objetos.",
+      "detail": "Las '20 conexiones' son por unidad (FACT). El tope de 256 dispositivos de transmisión por zona es un subclaim distinto y NO verificado (UNKNOWN, ver C05).",
       "sources": ["SRC028", "SRC051"],
       "status": "FACT"
     },

@@ -24,8 +24,8 @@ Regla de trazabilidad: cuando un principio de este directorio nació o cambió a
 | Corroboration / source independence | `source-and-corroboration.md` | Campo `aggregation_note` en `pokopia-research/sources/sources.json` | `learning-log/entries/LL-0001-c05-electric-limits-hardening.md` |
 | Blind research | `research-protocol.md` | Proceso de investigación, no un artefacto de datos | `learning-log/entries/LL-0001-c05-electric-limits-hardening.md` |
 | Adversarial verification | `research-protocol.md` | Ídem | `learning-log/entries/LL-0001-c05-electric-limits-hardening.md` |
-| HITL | `research-protocol.md` | Ídem; también normado en `CLAUDE.md` §9-10 | `learning-log/entries/LL-0001-c05-electric-limits-hardening.md` |
-| Anti-confirmation-bias | `source-and-corroboration.md` | Ídem; mandato corto en `CLAUDE.md` §4 | — |
+| HITL | `research-protocol.md` | Ídem; también normado en `CLAUDE.md` §13 | `learning-log/entries/LL-0001-c05-electric-limits-hardening.md` |
+| Anti-confirmation-bias | `source-and-corroboration.md` | Ídem; mandato corto en `CLAUDE.md` §6 | — |
 | Update / propagation analysis | `research-protocol.md` | Criterio P0/P1/P2 aplicado en `pokopia-research/research-notes.md` §15 | `learning-log/entries/LL-0001-c05-electric-limits-hardening.md` |
 | Reproducibility | `reproducibility.md` | Aún sin aplicación fuera de Pokopia | — |
 

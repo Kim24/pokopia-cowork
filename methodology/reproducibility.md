@@ -32,7 +32,7 @@ El proceso debe declarar en qué puntos exactos se requiere intervención humana
 Debe existir un criterio explícito para juzgar si el conocimiento producido es correcto y útil (no solo "se ve completo"). *Parcialmente cubierto*: los estados epistémicos (`evidence-and-claims.md`) cumplen esta función a nivel de claim individual; falta un criterio de evaluación a nivel de corpus completo (p. ej. cobertura, tasa de UNKNOWN, tasa de contradicciones sin resolver).
 
 ## Portability
-Qué partes del método dependen de herramientas, modelos o proveedores concretos, y cuáles no. *Cubierto por diseño*: todo el contenido de `methodology/` está escrito en términos de roles y procedimientos, sin mencionar ningún modelo o proveedor concreto (ver `CLAUDE.md` §14 sobre la migración de OpenCode/DeepSeek a Claude, que motiva este requisito).
+Qué partes del método dependen de herramientas, modelos o proveedores concretos, y cuáles no. *Cubierto por diseño*: todo el contenido de `methodology/` está escrito en términos de roles y procedimientos, sin mencionar ningún modelo o proveedor concreto (ver `CLAUDE.md` §24 sobre la migración de OpenCode/DeepSeek a Claude, que motiva este requisito).
 
 ## Mantenimiento de este archivo
 Se actualiza cuando se identifica un punto adicional necesario para la futura guía portable, o cuando uno de los puntos "pendientes" se resuelve y pasa a "cubierto". No se convierte en la guía completa hasta que exista una decisión explícita de escribirla.
